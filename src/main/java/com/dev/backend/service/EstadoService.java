@@ -31,9 +31,7 @@ public class EstadoService {
     }
 
     public void eliminarEstado(Long estadoId) {
-        System.out.println(estadoId);
         Estado estadoEliminar = estadoRepository.findById(estadoId).get();
-        System.out.println(estadoId);
         estadoRepository.deleteById(estadoEliminar.getId());
     }
 }

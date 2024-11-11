@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b14a71e7-6161-45ae-8289-bc0a311499ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/ProdutoImgController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/ProdutoImagens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/ProdutoImgRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/ProdutoImgService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/PermissaoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Permissao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/PermissaoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/PermissaoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/ProdutoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/ProdutoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgPath2-16c25b2b-844d-4a92-af53-5d565330f762-monitorlg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgPath2-1b3737ac-4914-4694-842e-f81efbfc72a0-monitorlg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgPath2-4c4e5b16-4304-4c4c-99dc-15776d8ae1e5-monitorlg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgPath2-59218526-fa83-4960-8a44-8b7d856a1750-monitorlg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgPath2-a411cd12-b161-4a4a-8155-c1e93898de2a-monitorlg.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

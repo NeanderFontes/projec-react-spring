@@ -9,6 +9,7 @@ import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ProdutoService {
@@ -21,6 +22,11 @@ public class ProdutoService {
     }
 
     public Produto criarProduto(Produto criarNovoProdutoModel) {
+        // Verifica se o UUID do produto já está presente
+        if (criarNovoProdutoModel.getUuid() != null) {
+            throw new RuntimeException("UUID já associado a uma imagem");
+        }
+        criarNovoProdutoModel.setUuid(UUID.randomUUID());
         criarNovoProdutoModel.setDataCriacao(new Date());
         return produtoRepository.saveAndFlush(criarNovoProdutoModel);
     }

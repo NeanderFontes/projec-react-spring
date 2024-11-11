@@ -6,41 +6,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.UUID;
 
 @Entity
-@Table(name = "produto")
+@Table(name = "produto_img")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Produto {
+public class ProdutoImagens {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "idCategoria")
-    private Categoria categoria;
-
-    @ManyToOne
-    @JoinColumn(name = "idMarca")
-    private Marca marca;
-
-    @Column(unique = true, nullable = false)
-    private UUID uuid;
-
-    private String descricaoCurta;
-
-    private String descricaoDetalhada;
-
-    private Double custoProduto;
-
-    private Double custoVenda;
+    private String nome;
 
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date dataCriacao;
 
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date dataAtualizacao;
+
+    @ManyToOne
+    @JoinColumn(name = "idProduto")
+    private Produto produto;
 }

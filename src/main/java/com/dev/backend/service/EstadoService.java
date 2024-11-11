@@ -24,8 +24,12 @@ public class EstadoService {
     }
 
     public Estado atualizarEstado(Estado estadoEntity) {
-        estadoEntity.setDataCriacao(estadoEntity.getDataCriacao());
+        Estado estadoAtual = estadoRepository.findById(estadoEntity.getId()).get();
+        Date dataCriacaoAtual = estadoAtual.getDataCriacao();
+
+        estadoEntity.setDataCriacao(dataCriacaoAtual);
         estadoEntity.setDataAtualizacao(new Date());
+
         return estadoRepository.saveAndFlush(estadoEntity);
 
     }

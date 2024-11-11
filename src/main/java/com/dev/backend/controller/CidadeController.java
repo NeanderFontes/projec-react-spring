@@ -1,8 +1,7 @@
 package com.dev.backend.controller;
 
-import com.dev.backend.model.Estado;
-import com.dev.backend.service.EstadoService;
-import jakarta.websocket.server.PathParam;
+import com.dev.backend.model.Cidade;
+import com.dev.backend.service.CidadeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -11,36 +10,35 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/estado")
-public class EstadoController {
+@RequestMapping("/api/cidade")
+public class CidadeController {
 
     @Autowired
-    private EstadoService estadoService;
+    private CidadeService cidadeService;
 
     @GetMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Estado> consultar() {
-        return estadoService.listAll();
+    public List<Cidade> listAll() {
+        return cidadeService.listAll();
     }
 
     @PostMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Estado inserir(@RequestBody Estado estadoEntity) {
-        return estadoService.criarEstado(estadoEntity);
-
+    public Cidade criar(@RequestBody Cidade criarCidade) {
+        return cidadeService.criarCidade(criarCidade);
     }
 
     @PutMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Estado atualizar(@RequestBody Estado estadoEntity) {
-        return estadoService.atualizarEstado(estadoEntity);
+    public Cidade atualizar(@RequestBody Cidade atualizarCidade) {
+        return cidadeService.atualizarCidade(atualizarCidade);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@PathVariable("id") Long estadoId) {
-        estadoService.eliminarEstado(estadoId);
+    public ResponseEntity<Void> eliminar(@PathVariable Long idCidade) {
+        cidadeService.eliminarCidaide(idCidade);
         return ResponseEntity.noContent().build();
     }
 }

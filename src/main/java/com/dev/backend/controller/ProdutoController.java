@@ -1,8 +1,7 @@
 package com.dev.backend.controller;
 
-import com.dev.backend.model.Estado;
-import com.dev.backend.service.EstadoService;
-import jakarta.websocket.server.PathParam;
+import com.dev.backend.model.Produto;
+import com.dev.backend.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -11,36 +10,34 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/estado")
-public class EstadoController {
-
+@RequestMapping
+public class ProdutoController {
     @Autowired
-    private EstadoService estadoService;
+    private ProdutoService produtoService;
 
     @GetMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Estado> consultar() {
-        return estadoService.listAll();
+    public List<Produto> listAll() {
+        return produtoService.listAll();
     }
 
     @PostMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Estado inserir(@RequestBody Estado estadoEntity) {
-        return estadoService.criarEstado(estadoEntity);
-
+    public Produto criar(@RequestBody Produto criarProduto) {
+        return produtoService.criarProduto(criarProduto);
     }
 
     @PutMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Estado atualizar(@RequestBody Estado estadoEntity) {
-        return estadoService.atualizarEstado(estadoEntity);
+    public Produto atualizar(@RequestBody Produto atualizarProduto) {
+        return produtoService.atualizarProduto(atualizarProduto);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@PathVariable("id") Long estadoId) {
-        estadoService.eliminarEstado(estadoId);
+    @DeleteMapping(value = "/")
+    public ResponseEntity<Void> eliminar(Long idParaEliminar) {
+        produtoService.elminarProduto(idParaEliminar);
         return ResponseEntity.noContent().build();
     }
 }

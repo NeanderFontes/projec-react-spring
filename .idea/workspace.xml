@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b14a71e7-6161-45ae-8289-bc0a311499ea" name="Changes" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CidadeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Cidade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/CidadeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/CidadeService.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CategoriaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Categoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/CategoriaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/CategoriaService.java" afterDir="false" />
->>>>>>> d1c88d20d0ab9d9a0261bbb64d0df1ce41c4633f
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/ProdutoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/ProdutoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/ProdutoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CategoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CategoriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CidadeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/EstadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/EstadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/MarcaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/MarcaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/CidadeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/CidadeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/CidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/CidadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/EstadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/EstadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,21 +55,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Microsoft/Desktop/API's/Alura-Project/alura-project-java-springboot/api"
-=======
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Microsoft/Desktop/React-JavaSpring/Projeto/projec-react-spring/backend&quot;
->>>>>>> d1c88d20d0ab9d9a0261bbb64d0df1ce41c4633f
-  }
-}</component>
+    &quot;keyToString&quot;: {
+      &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+      &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+      &quot;last_opened_file_path&quot;: &quot;C:/Users/Microsoft/Desktop/React-JavaSpring/Projeto/projec-react-spring/backend&quot;
+    }
+  }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -89,5 +83,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CidadeController.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dev/backend/service/CidadeService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

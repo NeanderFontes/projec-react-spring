@@ -16,27 +16,27 @@ public class ProdutoController {
     private ProdutoService produtoService;
 
     @GetMapping(value = "/",
-                produces = MediaType.APPLICATION_JSON_VALUE)
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Produto> listAll() {
         return produtoService.listAll();
     }
 
     @PostMapping(value = "/",
-                produces = MediaType.APPLICATION_JSON_VALUE,
-                consumes = MediaType.APPLICATION_JSON_VALUE)
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     public Produto criar(@RequestBody Produto criarProduto) {
         return produtoService.criarProduto(criarProduto);
     }
 
     @PutMapping(value = "/",
-                produces = MediaType.APPLICATION_JSON_VALUE,
-                consumes = MediaType.APPLICATION_JSON_VALUE)
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     public Produto atualizar(@RequestBody Produto atualizarProduto) {
         return produtoService.atualizarProduto(atualizarProduto);
     }
 
-    @DeleteMapping(value = "/")
-    public ResponseEntity<Void> eliminar(Long idParaEliminar) {
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> eliminar(@PathVariable("id") Long idParaEliminar) {
         produtoService.elminarProduto(idParaEliminar);
         return ResponseEntity.noContent().build();
     }

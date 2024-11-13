@@ -32,7 +32,7 @@ public class PessoaController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Pessoa atualizar(@RequestBody Pessoa atualizarPessoa) {
-        return pessoaService.criarPessoa(atualizarPessoa);
+        return pessoaService.atualizarPessoa(atualizarPessoa);
     }
 
 

@@ -1,0 +1,10 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¢¶ù«8‚ÎŒà±2
+m
+java:S3655#"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ìÁ‡È8ç·ÆÝ±2
+r
+java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¥á³ÿúÿÿÿÿ8ò„ÃÝ±2
+T
+java:S1128"2Remove this unused import 'javax.xml.crypto.Data'.(¦¿çˆýÿÿÿÿ8üèŒà±2
+Q
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿ8üèŒà±2

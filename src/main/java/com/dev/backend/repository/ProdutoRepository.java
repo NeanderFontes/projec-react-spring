@@ -10,4 +10,9 @@ import java.util.UUID;
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     Optional<Produto> findByUuid(UUID uuid);
+
+    boolean existsByDescricaoCurtaAndCategoriaId(String trim, Long id);
+
+    boolean existsByDescricaoCurtaAndMarcaId(String trim, Long id);
+
 }

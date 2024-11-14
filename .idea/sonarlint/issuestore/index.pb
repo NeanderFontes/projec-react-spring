@@ -47,3 +47,11 @@ h
 8src/main/java/com/dev/backend/service/PessoaService.java,e\6\e63592393c8b556697482cca2786029ade99c401
 n
 >src/main/java/com/dev/backend/controller/PessoaController.java,c\0\c0e2b7f9845865b6b4dc6f88542891ecc181708a
+k
+;src/main/java/com/dev/backend/service/CategoriaService.java,c\c\ccbcc1e012c23e4b245c827b497c942badeabc61
+^
+.src/main/java/com/dev/backend/model/Marca.java,b\7\b7275ccdbdfc40e7fed607613341db217e09ef7d
+b
+2src/main/java/com/dev/backend/model/Categoria.java,c\6\c63e67ca25bd7b2089ac752607b75e7e2217e20d
+h
+8src/main/java/com/dev/backend/model/PermissaoPessoa.java,8\b\8b8d042a636af187c0a9150a13008eafa8d07357

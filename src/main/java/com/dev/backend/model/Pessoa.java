@@ -1,12 +1,10 @@
 package com.dev.backend.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pessoa")
@@ -27,6 +25,7 @@ public class Pessoa {
     private String nome;
     private String cpf;
     private String email;
+    private String senha;
     private String cep;
 
     @Temporal(value = TemporalType.TIMESTAMP)
@@ -34,4 +33,18 @@ public class Pessoa {
 
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date dataAtualiacao;
+
+    @OneToMany(mappedBy = "pessoa", orphanRemoval = true, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @Setter(value = AccessLevel.NONE)
+    private List<PermissaoPessoa> permissaoPessoas;
+
+    // Toda vez que o controller Pessoa receber uma requisição e for criado uma pessoa, automaticamente vai settar o objeto para
+    // receber o tipo de permissão
+    public void setPermissaoPessoas(List<PermissaoPessoa> permissaoPessoas) {
+        for (PermissaoPessoa pessoa : permissaoPessoas) {
+            pessoa.setPessoa(this);
+        }
+
+        this.permissaoPessoas = permissaoPessoas;
+    }
 }

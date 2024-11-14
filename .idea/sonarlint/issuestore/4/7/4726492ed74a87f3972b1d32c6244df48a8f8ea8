@@ -1,10 +1,19 @@
 
-b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¢¶ù«8‚ÎŒà±2
-m
-java:S3655#"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ìÁ‡È8ç·ÆÝ±2
+g	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(æÞæÛþÿÿÿÿ8±Öº˜²2
+g	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(€‡ÞÚúÿÿÿÿ8±Öº˜²2
+h	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(ÏÝ£†øÿÿÿÿ8³Öº˜²2
+s
+java:S3655¶"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¹–³Žûÿÿÿÿ8ÎÖº˜²2
+s
+java:S3655¾"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Äˆü­úÿÿÿÿ8ÐÖº˜²2
 r
-java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¥á³ÿúÿÿÿÿ8ò„ÃÝ±2
-T
-java:S1128"2Remove this unused import 'javax.xml.crypto.Data'.(¦¿çˆýÿÿÿÿ8üèŒà±2
-Q
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿ8üèŒà±2
+java:S3655G"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¥á³ÿúÿÿÿÿ8ÐÖº˜²2
+K
+java:S2201w"/The return value of "orElseThrow" must be used.(Ä¦—L8ßÖº˜²2
+]	java:S125s"<This block of commented-out lines of code should be removed.(–þº§ýÿÿÿÿ8ßÖº˜²2
+L
+java:S2201z"/The return value of "orElseThrow" must be used.(óÙ½‘8¡¢÷˜²2
+X	java:S125~"<This block of commented-out lines of code should be removed.(šù€ä8áÖº˜²2
+O
+java:S1135}"2Complete the task associated to this TODO comment.(ÙÈÿÌ8áÖº˜²2
+Y	java:S125‡"<This block of commented-out lines of code should be removed.(Ï×Õ‹8æÖº˜²2

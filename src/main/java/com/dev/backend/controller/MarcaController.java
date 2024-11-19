@@ -1,5 +1,6 @@
 package com.dev.backend.controller;
 
+import com.dev.backend.DTO.requestDTO.MarcaRequestDTO;
 import com.dev.backend.model.Marca;
 import com.dev.backend.service.MarcaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +26,15 @@ public class MarcaController {
     @PostMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Marca criar(@RequestBody Marca criarMarca) {
-        return marcaService.criarMarca(criarMarca);
+    public Marca criar(@RequestBody MarcaRequestDTO criarMarcaDTO) {
+        return marcaService.criarMarca(criarMarcaDTO);
     }
 
     @PutMapping(value = "/",
                 produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Marca atualizar(@RequestBody Marca atualizarMarca) {
-        return marcaService.atualizarMarca(atualizarMarca);
+    public Marca atualizar(@RequestBody MarcaRequestDTO atualizarMarcaDTO) {
+        return marcaService.atualizarMarca(atualizarMarcaDTO);
     }
 
     @DeleteMapping("{id}")

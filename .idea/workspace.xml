@@ -5,30 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b14a71e7-6161-45ae-8289-bc0a311499ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b8d042a636af187c0a9150a13008eafa8d07357" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7275ccdbdfc40e7fed607613341db217e09ef7d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c63e67ca25bd7b2089ac752607b75e7e2217e20d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/ccbcc1e012c23e4b245c827b497c942badeabc61" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/b/8b8d042a636af187c0a9150a13008eafa8d07357" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/7/b7275ccdbdfc40e7fed607613341db217e09ef7d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/6/c63e67ca25bd7b2089ac752607b75e7e2217e20d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/c/ccbcc1e012c23e4b245c827b497c942badeabc61" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/DTO/requestDTO/DadosPessoaClienteCadastroRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/DadosPessoaClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/DadosPermissaoPessoaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/DadosPessoaClienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/AdicionarPermissaoParaPessoaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/DadosPessoaClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/4726492ed74a87f3972b1d32c6244df48a8f8ea8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/4726492ed74a87f3972b1d32c6244df48a8f8ea8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b3e1c3a34c3337c1f32c6066c0aa8244022eeec" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b3e1c3a34c3337c1f32c6066c0aa8244022eeec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de307baa96f57c713093120b97535b5f10bf43bd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de307baa96f57c713093120b97535b5f10bf43bd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e63592393c8b556697482cca2786029ade99c401" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e63592393c8b556697482cca2786029ade99c401" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/DTO/requestDTO/CategoriaRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/DTO/requestDTO/DadosPessoaGerenciarSenhasDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/DTO/requestDTO/EmailDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/DTO/requestDTO/MarcaRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/PessoaGerenciamentoSenhasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/enums/StatusEmailEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/EmailModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/EmailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/PessoaGerenciamentoSenhasService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CategoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/CategoriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/DadosPessoaClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/DadosPessoaClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/MarcaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/controller/MarcaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/PermissaoPessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/PermissaoPessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/model/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/PermissaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/PermissaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/CategoriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/CategoriaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/MarcaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/MarcaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/PessoaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/repository/PessoaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/CategoriaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/CategoriaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/DadosPessoaClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/DadosPessoaClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/MarcaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dev/backend/service/MarcaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,6 +80,8 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.dev.backend.service" />
+      <recent name="com.dev.backend.controller" />
+      <recent name="com.dev.backend.DTO.requestDTO" />
       <recent name="com.dev.backend.repository" />
     </key>
   </component>
@@ -103,5 +106,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dev/backend/service/PessoaGerenciamentoSenhasService.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dev/backend/controller/PessoaGerenciamentoSenhasController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dev/backend/controller/PessoaGerenciamentoSenhasController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -19,6 +19,9 @@ public class EstadoService {
     }
 
     public Estado criarEstado(Estado estadoEntity) {
+        estadoEntity.getNome().trim();
+        estadoEntity.getSigla().trim();
+        estadoEntity.getSigla().toUpperCase();
         estadoEntity.setDataCriacao(new Date());
         return estadoRepository.saveAndFlush(estadoEntity);
     }

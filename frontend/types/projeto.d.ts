@@ -15,4 +15,9 @@ declare namespace Projeto {
         id: number;
         nome: string;
     }
+
+    type Categoria = {
+        id: number;
+        nome: string;
+    }
 }

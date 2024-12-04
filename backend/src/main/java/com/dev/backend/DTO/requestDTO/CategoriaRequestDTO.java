@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 @Data
 public class CategoriaRequestDTO {
     //TODO add validantion @NotBlank
+    private Long id;
     private String nome;
 
     // Método para converter DTO em dados Model

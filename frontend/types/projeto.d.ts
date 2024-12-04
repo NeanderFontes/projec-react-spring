@@ -8,6 +8,11 @@ declare namespace Projeto {
     type Cidade = {
         id: number; // O ID da cidade não deve ser opcional, pois é a chave primária
         nome: string;
-        estado: Estados;
+        estado: Estados; // Relacionamento com FK dos Estados
     };
+
+    type Marca = {
+        id: number;
+        nome: string;
+    }
 }

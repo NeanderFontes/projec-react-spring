@@ -100,6 +100,41 @@ const AppMenu = () => {
                     label: 'Empty',
                     icon: 'pi pi-fw pi-circle-off',
                     to: '/pages/empty'
+                },
+                {
+                    label: 'Cidade',
+                    icon: 'pi pi-fw pi-circle-off',
+                    to: '/pages/cidade'
+                },
+                {
+                    label: 'Estados',
+                    icon: 'pi pi-fw pi-circle-off',
+                    to: '/pages/estados'
+                },
+                {
+                    label: 'Marca',
+                    icon: 'pi pi-fw pi-circle-off',
+                    to: '/pages/marca'
+                },
+                {
+                    label: 'Categoria',
+                    icon: 'pi pi-fw pi-circle-off',
+                    to: '/pages/categoria'
+                },
+                {
+                    label: 'Produtos',
+                    icon: 'pi pi-fw pi-circle-off',
+                    to: '/pages/produto'
+                },
+                {
+                    label: 'Permissão',
+                    icon: 'pi pi-fw pi-circle-off',
+                    to: '/pages/permissao'
+                },
+                {
+                    label: 'Pessoa',
+                    icon: 'pi pi-fw pi-circle-off',
+                    to: '/pages/pessoa'
                 }
             ]
         },

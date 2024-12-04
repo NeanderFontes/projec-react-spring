@@ -52,7 +52,7 @@ public class CategoriaService {
         categoriaValidacao.getNome().trim();
 
         // Verificação em DB através de boolean para verificar se nome da categoria ja existe
-        boolean categoriaValidacaoExist = categoriaRepository.findByNome(categoriaValidacao);
+        boolean categoriaValidacaoExist = categoriaRepository.existsByNome(categoriaValidacao.getNome());
         if (categoriaValidacaoExist) {
             throw new IllegalArgumentException("Categoria " + categoriaValidacao.getNome()
                     + " já existe!");
@@ -70,10 +70,10 @@ public class CategoriaService {
                 .orElseThrow(() -> new IllegalArgumentException("Parâmetro de "
                         + validarCategoriaId.getId() + " inválido para atualizar da Categoria."));
 
-        // Manter dados de existentes do objeto já existente
+        // Caso ID seja válido, alterar os dados em DB e retornar para salvar
         idCategoriaDB.setDataCriacao(idCategoriaDB.getDataCriacao());
-        idCategoriaDB.setDataAtualizacao(new Date());
         idCategoriaDB.setNome(validarCategoriaId.getNome());
+        idCategoriaDB.setDataAtualizacao(new Date());
 
         // Duvida se retorno o obeto do DB ou Att
         return idCategoriaDB;

@@ -11,76 +11,76 @@ import { Toolbar } from 'primereact/toolbar';
 import { classNames } from 'primereact/utils';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Projeto } from '@/types';
-import { MarcaService } from '@/service/MarcaService';
+import { CategoriaService } from '@/service/CategoriaService';
 
-const Marca = () => {
-    let novoObjetoMarca: Projeto.Marca = {
+const Categoria = () => {
+    let novoObjetoCategoria: Projeto.Categoria = {
         id: 0,
         nome: ''
     };
 
-    const [objetoMarcasList, setMarcasList] = useState<Projeto.Marca[]>([]);
-    const [objetoMarcaDialog, setMarcaDialog] = useState(false);
-    const [deleteObjetoMarcaDialog, setDeleteMarcaDialog] = useState(false);
-    const [deleteObjetosMarcasDialog, setDeleteMarcasDialog] = useState(false);
-    const [objetoMarca, setMarca] = useState<Projeto.Marca>(novoObjetoMarca);
-    const [selectedObjetoMarcas, setSelectedMarcas] = useState(null);
+    const [objetoCategoriasList, setCategoriasList] = useState<Projeto.Categoria[]>([]);
+    const [objetoCategoriaDialog, setCategoriaDialog] = useState(false);
+    const [deleteObjetoCategoriaDialog, setDeleteCategoriaDialog] = useState(false);
+    const [deleteObjetosCategoriasDialog, setDeleteCategoriasDialog] = useState(false);
+    const [objetoCategoria, setCategoria] = useState<Projeto.Categoria>(novoObjetoCategoria);
+    const [selectedObjetoCategorias, setSelectedCategorias] = useState(null);
     const [submitted, setSubmitted] = useState(false);
     const [globalFilter, setGlobalFilter] = useState('');
     const toast = useRef<Toast>(null);
     const dt = useRef<DataTable<any>>(null);
-    const marcaService = useMemo(() => new MarcaService(), []);
+    const categoriaService = useMemo(() => new CategoriaService(), []);
 
     useEffect(() => {
-        if(objetoMarcasList.length == 0) {
-            marcaService
+        if(objetoCategoriasList.length == 0) {
+            categoriaService
             .listAll()
             .then((response) => {
                 console.log(response.data);
-                setMarcasList(response.data)
+                setCategoriasList(response.data)
             }).catch((error) => {
                 console.log(error);
                 toast.current?.show({
                     severity: 'error',
                     summary: 'Erro!',
-                    detail: 'Não foi possível listar as marcas' + error.data.message,
+                    detail: 'Não foi possível listar as Categorias' + error.data.message,
                     life: 3000
                 });
             })
         }
-    }, [marcaService, objetoMarcasList]);
+    }, [categoriaService, objetoCategoriasList]);
 
     const openNew = () => {
-        setMarca(novoObjetoMarca);
+        setCategoria(novoObjetoCategoria);
         setSubmitted(false);
-        setMarcaDialog(true);
+        setCategoriaDialog(true);
     };
 
     const hideDialog = () => {
         setSubmitted(false);
-        setMarcaDialog(false);
+        setCategoriaDialog(false);
     };
 
-    const hideDeleteProductDialog = () => {
-        setDeleteMarcaDialog(false);
+    const hideDeleteCategoriaDialog = () => {
+        setDeleteCategoriaDialog(false);
     };
 
-    const hideDeleteProductsDialog = () => {
-        setDeleteMarcasDialog(false);
+    const hideDeleteCategoriasDialog = () => {
+        setDeleteCategoriasDialog(false);
     };
 
-    const saveMarcaOrUpdate = () => {
+    const saveCategoriaOrUpdate = () => {
         setSubmitted(true);
 
-        if (!objetoMarca.id) {
-            objetoMarca.nome.trim();
-            marcaService
-            .criarMarca(objetoMarca)
+        if (!objetoCategoria.id) {
+            objetoCategoria.nome.trim();
+            categoriaService
+            .criarCategoria(objetoCategoria)
             .then((response) => {
                 console.log(response.data);
-                setMarcaDialog(false);
-                setMarca(novoObjetoMarca);
-                setMarcasList([]);
+                setCategoriaDialog(false);
+                setCategoria(novoObjetoCategoria);
+                setCategoriasList([]);
                 toast.current?.show({
                     severity: 'success',
                     summary: 'Sucesso!',
@@ -100,13 +100,13 @@ const Marca = () => {
                 });
             });
         } else {
-            objetoMarca.nome.trim();
-            marcaService.atualizarMarca(objetoMarca)
+            objetoCategoria.nome.trim();
+            categoriaService.atualizarCategoria(objetoCategoria)
             .then((response) => {
                 console.log(response.data);
-                setMarcaDialog(false);
-                setMarca(novoObjetoMarca);
-                setMarcasList([]);
+                setCategoriaDialog(false);
+                setCategoria(novoObjetoCategoria);
+                setCategoriasList([]);
                 toast.current?.show({
                     severity: 'success',
                     summary: 'Sucesso!',
@@ -128,23 +128,23 @@ const Marca = () => {
         }
     };
 
-    const editMarca = (product: Projeto.Marca) => {
-        setMarca({ ...product });
-        setMarcaDialog(true);
+    const editCategoria = (product: Projeto.Categoria) => {
+        setCategoria({ ...product });
+        setCategoriaDialog(true);
     };
 
-    const confirmDeleteMarca = (product: Projeto.Marca) => {
-        setMarca(product);
-        setDeleteMarcaDialog(true);
+    const confirmDeleteCategoria = (product: Projeto.Categoria) => {
+        setCategoria(product);
+        setDeleteCategoriaDialog(true);
     };
 
-    const deleteMarca = () => {
-        if (objetoMarca.id != undefined) {
-            marcaService.eliminarMarca(objetoMarca.id)
+    const deleteCategoria = () => {
+        if (objetoCategoria.id != undefined) {
+            categoriaService.eliminarCategoria(objetoCategoria.id)
             .then((response) => {
-                setMarca(novoObjetoMarca);
-                setDeleteMarcaDialog(false);
-                setMarcasList([]);
+                setCategoria(novoObjetoCategoria);
+                setDeleteCategoriaDialog(false);
+                setCategoriasList([]);
                 toast.current?.show({
                     severity: 'success',
                     summary: 'Sucesso!',
@@ -188,10 +188,10 @@ const Marca = () => {
     };
 
     const confirmDeleteSelected = () => {
-        setDeleteMarcasDialog(true);
+        setDeleteCategoriasDialog(true);
     };
 
-    const deleteSelectedMarcas = () => {
+    const deleteSelectedCategorias = () => {
         // let _products = (products as any)?.filter((val: any) => !(selectedProducts as any)?.includes(val));
         // setMarcas(_products);
         // setDeleteProductsDialog(false);
@@ -214,7 +214,7 @@ const Marca = () => {
         const val = (e.target && e.target.value) || '';
         
         // Usamos a função de atualização de estado, que garante o uso do estado mais recente
-        setMarca((prevMarca) => ({
+        setCategoria((prevMarca) => ({
             ...prevMarca,  // Copia todas as propriedades do estado anterior
             [nome]: val     // Atualiza apenas o campo específico com o novo valor
         }));
@@ -233,7 +233,7 @@ const Marca = () => {
             <React.Fragment>
                 <div className="my-2">
                     <Button label="New" icon="pi pi-plus" severity="success" className=" mr-2" onClick={openNew} />
-                    <Button label="Delete" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedObjetoMarcas || !(selectedObjetoMarcas as any).length} />
+                    <Button label="Delete" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedObjetoCategorias || !(selectedObjetoCategorias as any).length} />
                 </div>
             </React.Fragment>
         );
@@ -248,16 +248,16 @@ const Marca = () => {
         );
     };
 
-    const codeBodyTemplate = (rowData: Projeto.Marca) => {
+    const codeBodyTemplate = (rowData: Projeto.Categoria) => {
         return (
             <>
-                <span className="p-column-title">Código Marca</span>
+                <span className="p-column-title">Código Categoria</span>
                 {rowData.id}
             </>
         );
     };
 
-    const nameBodyTemplate = (rowData: Projeto.Marca) => {
+    const nameBodyTemplate = (rowData: Projeto.Categoria) => {
         return (
             <>
                 <span className="p-column-title">Nome</span>
@@ -266,7 +266,7 @@ const Marca = () => {
         );
     };
 
-    // const imageBodyTemplate = (rowData: Projeto.Marca) => {
+    // const imageBodyTemplate = (rowData: Projeto.Categoria) => {
     //     return (
     //         <>
     //             <span className="p-column-title">Image</span>
@@ -275,11 +275,11 @@ const Marca = () => {
     //     );
     // };
 
-    const actionBodyTemplate = (rowData: Projeto.Marca) => {
+    const actionBodyTemplate = (rowData: Projeto.Categoria) => {
         return (
             <>
-                <Button icon="pi pi-pencil" rounded severity="success" className="mr-2" onClick={() => editMarca(rowData)} />
-                <Button icon="pi pi-trash" rounded severity="warning" onClick={() => confirmDeleteMarca(rowData)} />
+                <Button icon="pi pi-pencil" rounded severity="success" className="mr-2" onClick={() => editCategoria(rowData)} />
+                <Button icon="pi pi-trash" rounded severity="warning" onClick={() => confirmDeleteCategoria(rowData)} />
             </>
         );
     };
@@ -294,22 +294,22 @@ const Marca = () => {
         </div>
     );
 
-    const marcaDialogFooter = (
+    const categoriaDialogFooter = (
         <>
             <Button label="Cancel" icon="pi pi-times" text onClick={hideDialog} />
-            <Button label="Save" icon="pi pi-check" text onClick={saveMarcaOrUpdate} />
+            <Button label="Save" icon="pi pi-check" text onClick={saveCategoriaOrUpdate} />
         </>
     );
-    const deleteMarcaDialogFooter = (
+    const deleteCategoriaDialogFooter = (
         <>
-            <Button label="No" icon="pi pi-times" text onClick={hideDeleteProductDialog} />
-            <Button label="Yes" icon="pi pi-check" text onClick={deleteMarca} />
+            <Button label="No" icon="pi pi-times" text onClick={hideDeleteCategoriaDialog} />
+            <Button label="Yes" icon="pi pi-check" text onClick={deleteCategoria} />
         </>
     );
-    const deleteMarcasDialogFooter = (
+    const deleteCategoriasDialogFooter = (
         <>
-            <Button label="No" icon="pi pi-times" text onClick={hideDeleteProductsDialog} />
-            <Button label="Yes" icon="pi pi-check" text onClick={deleteSelectedMarcas} />
+            <Button label="No" icon="pi pi-times" text onClick={hideDeleteCategoriasDialog} />
+            <Button label="Yes" icon="pi pi-check" text onClick={deleteSelectedCategorias} />
         </>
     );
 
@@ -322,9 +322,9 @@ const Marca = () => {
 
                     <DataTable
                         ref={dt}
-                        value={objetoMarcasList}
-                        selection={selectedObjetoMarcas}
-                        onSelectionChange={(e) => setSelectedMarcas(e.value as any)}
+                        value={objetoCategoriasList}
+                        selection={selectedObjetoCategorias}
+                        onSelectionChange={(e) => setSelectedCategorias(e.value as any)}
                         dataKey="id"
                         paginator
                         rows={10}
@@ -348,21 +348,21 @@ const Marca = () => {
                         <Column body={actionBodyTemplate} headerStyle={{ minWidth: '10rem' }}></Column>
                     </DataTable>
 
-                    <Dialog visible={objetoMarcaDialog} style={{ width: '450px' }} header="Detalhe das Marcas" modal className="p-fluid" footer={marcaDialogFooter} onHide={hideDialog}>
+                    <Dialog visible={objetoCategoriaDialog} style={{ width: '450px' }} header="Detalhe das Marcas" modal className="p-fluid" footer={categoriaDialogFooter} onHide={hideDialog}>
                         {/* {product.image && <img src={`/demo/images/product/${product.image}`} alt={product.image} width="150" className="mt-0 mx-auto mb-5 block shadow-2" />} */}
                         <div className="field">
-                            <label htmlFor="name">Nome da Marca</label>
+                            <label htmlFor="name">Nome da Categoria</label>
                             <InputText
                                 id="name"
-                                value={objetoMarca.nome}
+                                value={objetoCategoria.nome}
                                 onChange={(e) => onInputChange(e, 'nome')}
                                 required
                                 autoFocus
                                 className={classNames({
-                                    'p-invalid': submitted && !objetoMarca.nome
+                                    'p-invalid': submitted && !objetoCategoria.nome
                                 })}
                             />
-                            {submitted && !objetoMarca.nome && <small className="p-invalid">Nome da Marca é Obrigatório.</small>}
+                            {submitted && !objetoCategoria.nome && <small className="p-invalid">Nome da Categoria é Obrigatório.</small>}
                         </div>
                         {/* <div className="field">
                             <label htmlFor="description">Description</label>
@@ -370,21 +370,21 @@ const Marca = () => {
                         </div> */}
                     </Dialog>
 
-                    <Dialog visible={deleteObjetoMarcaDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteMarcaDialogFooter} onHide={hideDeleteProductDialog}>
+                    <Dialog visible={deleteObjetoCategoriaDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteCategoriaDialogFooter} onHide={hideDeleteCategoriaDialog}>
                         <div className="flex align-items-center justify-content-center">
                             <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
-                            {objetoMarca && (
+                            {objetoCategoria && (
                                 <span>
-                                    Tem certeza que deseja deletar a Marca? <b>{objetoMarca.nome}</b>?
+                                    Tem certeza que deseja deletar a Marca? <b>{objetoCategoria.nome}</b>?
                                 </span>
                             )}
                         </div>
                     </Dialog>
 
-                    <Dialog visible={deleteObjetosMarcasDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteMarcasDialogFooter} onHide={hideDeleteProductsDialog}>
+                    <Dialog visible={deleteObjetosCategoriasDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteCategoriasDialogFooter} onHide={hideDeleteCategoriasDialog}>
                         <div className="flex align-items-center justify-content-center">
                             <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
-                            {objetoMarca && <span>Você tem certeza que deseja deletar toda(s) a(s) Marca(s) Selecionada(s)?</span>}
+                            {objetoCategoria && <span>Você tem certeza que deseja deletar toda(s) a(s) Categoria(s) Selecionada(s)?</span>}
                         </div>
                     </Dialog>
                 </div>
@@ -393,4 +393,4 @@ const Marca = () => {
     );
 };
 
-export default Marca;
+export default Categoria;

@@ -50,11 +50,12 @@ public class MarcaService {
         validarDadoMarca.getNome().trim();
 
         // Verificar em DB por boolean para indentificar sem nome já existe
-        boolean nomeMarcaExist = marcaRepository.findByNome(validarDadoMarca.getNome());
+        boolean nomeMarcaExist = marcaRepository.existsByNome(validarDadoMarca.getNome());
         if (nomeMarcaExist) {
             throw new IllegalArgumentException("Marca " + validarDadoMarca.getNome()
                     + " já existe!");
         }
+        validarDadoMarca.setNome(validarDadoMarca.getNome());
         validarDadoMarca.setDataCriacao(new Date());
         return validarDadoMarca;
     }
